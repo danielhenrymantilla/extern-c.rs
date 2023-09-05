@@ -20,9 +20,10 @@ impls! {
 }
 // where
 macro_rules! impls {(
-        $(
-                $Hd:ident $(,
-                $Rest:ident )* $(,)? )?
+    $(
+        $Hd:ident $(,
+        $Rest:ident )* $(,)?
+    )?
 ) => (
     $(impls! { $($Rest),* })?
 
